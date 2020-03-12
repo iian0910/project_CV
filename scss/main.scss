@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Raleway&display=swap');
+
+/*---------------------------------*/
+/* $Catalog
+-----------------------------------*/
+/**
+ * Globel
+ * Elements
+ * Header
+ * About
+ * Quote
+ * Skill
+ * Experience
+ * Work
+ * Contact
+ * Footer
+ * Parallax graphic
+**/
+
+/*---------------------------------*/
+/* $Globel
+-----------------------------------*/
+$CVprimary: #4e4f95;
+$CVsecondary: #c87db4;
+$CVthird: #e881a7;
+$CVblack: #484848;
+/*---------------------------------*/
+/* $Elements
+-----------------------------------*/
+*{
+	position: relative;
+}
+.bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/urban-long-exposure-night.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&::after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(60deg, $CVprimary, $CVsecondary);
+		opacity: 0.6;
+	}
+	z-index: -1;
+}
+.lean-bg--top::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 180px;
+	background-color: white;
+	top: 0;
+	transform: skewY(-5deg) translateY(-50%);
+	@media screen and (max-width: 768px){
+		transform: skewY(-5deg) translateY(-30%);
+	}
+}
+.lean-bg--top{
+	margin-top: 160px;
+}
+.lean-bg--no-margin{
+	margin-top: 0;
+}
+.lean-bg--bottom::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 180px;
+	background-color: white;
+	bottom: 0;
+	transform: skewY(-5deg) translateY(50%);
+	@media screen and (max-width: 768px){
+    height: 80px;
+    transform: skewY(-5deg) translateY(80%);
+	}
+}
+.lean-bg--bottom{
+	margin-bottom: 80px;
+}
+.icon-btn{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	transition: all .3s;
+	&:hover{
+		text-decoration: none;
+		transform: translateY(-20%);
+	}
+	.icon {
+		display: block;
+		text-align: center;
+		line-height: 32px;
+		font-size: 24px;
+	}
+}
+.text-btn{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Raleway', 'roboto', arial, sans-serif;
+	letter-spacing: 0;
+	color: $CVblack;
+	&_primary{
+		color: $CVthird;
+	}
+	&_lg{
+		font-size: 20px;
+		line-height: 48px;
+		height: 48px;
+		font-weight: 900;
+		&::before{
+			content:"";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background-color: $CVthird;
+			transition: all .3s;
+		}
+	}
+	&:hover{
+		color: darken($CVthird, 10);
+		text-decoration: none;
+		&::before{
+			width: 100%;
+		}
+	}
+}
+.work_btn{
+	border: 1px solid $CVthird;
+	background-color: transparent;
+	color: $CVthird;
+	padding: 5px 80px;
+	border-radius: 36px;
+	font-size: 18px;
+	line-height: 36px;
+	z-index: 10;
+	&:hover{
+		background-color: $CVthird;
+		color: white;
+	}
+}
+.form-btn{
+	background-color: $CVthird;
+	color: white;
+	padding: 5px 80px;
+	border-radius: 36px;
+	font-size: 18px;
+	line-height: 36px;
+	&:hover{
+		background-color: darken($CVthird, 10);
+		color: white;
+	}
+}
+.subTitle{
+	font-size: 48px;
+	font-weight: 900;
+	font-family: 'Raleway', 'roboto', arial, sans-serif;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	text-align: center;
+	@media screen and (max-width:768px) {
+		font-size: 40px;
+	}
+}
+.imgbox{
+	width: 100%;
+	overflow: hidden;
+	&_inner{
+		width: 100%;
+		padding-top: 100%;
+		&_4-3{
+			padding-top: calc(100% * 3 / 4);
+		}
+		.image{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+/*---------------------------------*/
+/* $Header
+-----------------------------------*/
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transition: all .3s;
+	.navbar{
+		&_socialBar{
+			padding: 24px;
+			float: left;
+			.icon-btn{
+				color: white;
+			}
+			@media screen and (max-width: 768px) {
+				padding: 12px;
+			}
+		}
+		.menu-toggle{
+			display: block;
+			padding: 24px;
+			span{
+				display: block;
+				width: 32px;
+				height: 5px;
+				background-color: white;
+				margin-bottom: 8px;
+				transition: all .3s;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			&:hover{
+				span{
+					&:first-child{
+						transform: translateX(-20%);
+					}
+					&:last-child{
+						transform: translateX(20%);
+					}
+				}
+			}
+			@media screen and (max-width: 768px){
+				padding: 12px;
+				padding-top: 16px;
+			}
+		}
+		.popup-menu{
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: all 0.3s;
+			visibility: hidden;
+		}
+		.popup-menu_list{
+			padding-top: 80px;
+			list-style: none;
+		}
+		.popup-menu_item{
+			display: block;
+			text-align: center;
+			font-family: 'Raleway', 'Helvetica', 'roboto', arial, sans-serif;
+			font-size: 40px;
+			font-weight: 600;
+			color: $CVblack;
+			line-height: 80px;
+			transition: all .3s;
+			@media screen and (max-width:768px){
+				font-size: 24px;
+				line-height: 48px;
+			}
+			&:hover{
+				color: $CVthird;
+				text-decoration: none;
+			}
+		}
+		#popup-overlay:target{
+			opacity: 1;
+			visibility: visible;
+		}
+		.popup-menu_close{
+			padding: 24px;
+			width: 80px;
+			height: 80px;
+			position: relative;
+			float: right;
+			transition: all .3s;
+			z-index: 999;
+			@media screen and (max-width:768px){
+				padding: 12px;
+				width: 56px;
+				height: 56px;
+			}
+			span{
+				width: 32px;
+				height: 5px;
+				background-color: $CVthird;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				display: block;
+				&:first-child{
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+				&:last-child{
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+			}
+			&:hover{
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.navbarCollapse{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+.headerColorChange{
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+	.menu-toggle span{
+		background-color: $CVthird !important;
+	}
+	.icon-btn .icon{
+		color: $CVthird;
+	}
+}
+/*---------------------------------*/
+/* $About
+-----------------------------------*/
+.hero{
+	padding-top: 20vh;
+	padding-bottom: 20vh;
+	@media screen and (max-width:576px) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	&_heading{
+		font-size: 120px;
+		font-weight: 900;
+		color: white;
+		@media screen and (max-width: 760px){
+			font-size: 48px;
+		}
+	}
+	&_btn{
+		background-color: $CVthird;
+		border: none;
+		font-size: 20px;
+		line-height: 56px;
+		height: 56px;
+		font-weight: 400;
+		border-radius: 28px;
+		padding: 0 64px;
+		@media screen and (max-width: 768px){
+			font-size: 18px;
+			line-height: 48px;
+			height: 48px;
+			font-weight: 400;
+			border-radius: 24px;
+			padding: 0 64px;
+		}
+		@media screen and (max-width: 576px){
+			font-size: 14px;
+			line-height: 32px;
+			height: 32px;
+			font-weight: 400;
+			border-radius: 16px;
+			padding: 0 32px;
+		}
+		&:active,
+		&:hover,
+		&:focus{
+			background-color: darken($CVthird, 10)!important;
+			box-shadow: none;
+		}
+	}
+	&_bg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 80px;
+		background-image: url('../images/portrait.png');
+		background-size: 400px;
+		background-repeat: no-repeat;
+		background-position: right top;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: 1140px;
+		z-index: -1;
+		@media screen and (max-width:760px){
+			background-size: 320px;
+		}
+		@media screen and (max-width:576px){
+			background-size: 200px;
+			top: 40px;
+		}
+	}
+}
+/*---------------------------------*/
+/* $Quote
+-----------------------------------*/
+.quote{
+	background-color: #fff;
+	padding-top: 120px;
+	padding-bottom: 80px;
+	@media screen and (max-width:760px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	&_content{
+		text-align: center;
+		font-size: 18px;
+		line-height: 40px;
+	}
+	&_icon{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: $CVthird;
+		text-align: center;
+		line-height: 60px;
+		font-size: 32px;
+		color: white;
+		margin: 0 auto;
+		margin-bottom: 24px;
+	}
+	&_text{
+		font-size: 18px;
+		line-height: 40px;
+		color: $CVblack;
+		margin-bottom: 24px;
+	}
+	&_name{
+		color: $CVblack;
+		span{
+			color: $CVthird;
+		}
+	}
+}
+/*---------------------------------*/
+/* $Skill
+-----------------------------------*/
+.skill{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: white;
+	@media screen and (max-width:768px){
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	&_group{
+		padding: 80px 0;
+		@media screen and (max-width:768px) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	&_card{
+		padding-left: 32px;
+		margin-bottom: 32px;
+		@media screen and (max-width:768px) {
+			margin-top: 48px;
+			padding-left: 0;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&_inner{
+			padding: 24px;
+			padding-left: 48px;
+			background-color: white;
+			border-radius: 4px;
+			box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+			@media screen and (max-width:768px) {
+				padding: 24px;
+				padding-top: 48px;
+			}
+			&_title{
+				color: $CVthird;
+				font-family: 'Raleway', 'roboto', arial, sans-serif;
+				margin-top: 0;
+				margin-bottom: 8px;
+			}
+			&_text{
+				margin: 0;
+			}
+		}
+		&_icon{
+			width: 64px;
+			height: 64px;
+			border-radius: 50%;
+			box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: white;
+			@media screen and (max-width:768px) {
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.image{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				max-width: 60%;
+				max-height: 60%;
+			}
+		}
+	}
+}
+/*---------------------------------*/
+/* $Experience
+-----------------------------------*/
+.experience{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@media screen and (max-width: 768px){
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.subTitle{
+		color: white;
+	}
+	.timeline-group{
+		max-width: 960px;
+		height: 100%;
+		margin: 0 auto;
+		margin-top: 120px;
+		.timeline{
+			width: 4px;
+			height: 100%;
+			background-color: $CVthird;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+			@media screen and (max-width: 768px) {
+				left: 0;
+			}
+		}
+		.timeline_cards_row{
+			&:nth-child(odd){
+				display: flex;
+				justify-content: flex-start;
+				@media screen and (max-width: 768px) {
+					justify-content: flex-end;
+					>:before{
+						transform: translate(-50%, -50%);
+						left: -24px;
+					}
+				}
+			}
+			&:nth-child(even){
+				display: flex;
+				justify-content: flex-end;
+				>:before{
+					transform: translate(-50%, -50%);
+					left: -24px;
+				}
+			}
+			&:last-child .timeline_card{
+				margin-bottom: 0;
+			}
+		}
+		.timeline_card{
+			padding: 24px;
+			background-color: white;
+			border-radius: 4px;
+			width: calc(50% - 24px);
+			box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+			@media screen and (max-width: 768px) {
+				margin-bottom: 24px;
+				width: calc(100% - 24px);
+			}
+			&_text{
+				margin: 0;
+			}
+			&:before{
+				content: "";
+				display: block;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				right: -24px;
+				transform: translate(50%, -50%);
+				background-color: $CVthird;
+				box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+			}
+		}
+	}
+}
+/*---------------------------------*/
+/* $Work
+-----------------------------------*/
+.work{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: white;
+	@media screen and (max-width: 768px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	&_float{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		@media screen and (max-width: 768px){
+			position: static;
+			top: 0;
+			transform: none;
+		}
+	}
+	&_list{
+		padding-top: 80px;
+	}
+	&_item{
+		margin-bottom: 160px;
+		@media screen and (max-width: 768px) {
+			margin-bottom: 48px;
+		}
+		&_text{
+			padding-top: 24px;
+			&--right{
+				text-align: right;
+				@media screen and (max-width: 768px) {
+					text-align: left;
+				}
+			}
+			&--left{
+				text-align: left;
+			}
+			&_title{
+				font-size: 40px;
+				font-family: 'Raleway', 'roboto', arial, sans-serif;
+				font-weight: bold;
+				color: $CVblack;
+				@media screen and (max-width: 768px) {
+					font-size: 24px;
+					line-height: 32px;
+					margin-top: 0;
+					margin-bottom: 8px;
+				}
+				&--right{
+					margin-right: -80px;
+					@media screen and (max-width: 768px){
+						margin-right: 0;
+					}
+				}
+				&--left{
+					margin-left: -80px;
+					@media screen and (max-width: 768px){
+						margin-left: 0;
+					}
+				}
+			}
+			&_intro{
+				font-size: 16px;
+				line-height: 32px;
+			}
+		}
+	}
+}
+/*---------------------------------*/
+/* $Contact
+-----------------------------------*/
+.contact{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@media screen and (max-width: 768px){
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.subTitle{
+		color: white;
+	}
+	.form{
+		max-width: 600px;
+		margin: 0 auto;
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"],
+		textarea{
+			padding: 8px 16px;
+			display: inline-block;
+			background-color: transparent;
+			border: 1px solid white;
+			color: white;
+			vertical-align: middle;
+			width: 100%;
+		}
+		input[type="text"]:focus,
+		input[type="tel"]:focus,
+		input[type="email"]:focus,
+		textarea:focus{
+			outline: 0;
+			box-shadow: none;
+			border: 1px solid $CVthird;
+		}
+		textarea{
+			resize: none;
+		}
+		label{
+			margin-bottom: 8px;
+			display: inline-block;
+			vertical-align: middle;
+			color: white;
+		}
+	}
+	.divide-text{
+		margin-top: 80px;
+		margin-bottom: 80px;
+		text-align: center;
+		color: white;
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.info{
+		text-align: center;
+		&_email a,
+		&_social-bar .icon-btn{
+			color: $CVthird;
+			font-size: 18px;
+			font-weight: 400;
+		}
+		&_phone{
+			color: white;
+			font-size: 24px;
+			font-weight: 400;
+		}
+	}
+}
+/*---------------------------------*/
+/* $Footer
+-----------------------------------*/
+.footer{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	color: white;
+	&_text,
+	&_copyright{
+		max-width: 600px;
+		margin: 0 auto;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+}
+/*---------------------------------*/
+/* $Parallax graphic
+-----------------------------------*/
+[class^="graphic_"]{
+	position: absolute;
+	@media screen and (max-width:768px){
+		transform: scale(0.5);
+	}
+}
+.graphic_001{ top: 20%;	left: 5%; }
+.graphic_002{ bottom: 0%;	left: 2%; }
+.graphic_003{ top: -120%;	right: 5%; }
+.graphic_004{ top: -30%;	right: 20%; }
+.graphic_005{ bottom: 20%;	left: 5%; }
+.graphic_006{ bottom: 50%;	left: -5%; }
+.graphic_007{ top: -30%;	right: -5%; }
+.graphic_008{ top: 10%;	right: 10%; }
+.graphic_009{ bottom: 50%;	left: 5%; }
+.graphic_010{ bottom: -10%;	right: 20%; }
+.graphic_011{ top: 5%;	left: -5%; }
+.graphic_012{ top: 12%;	left: 5%; }
+.graphic_013{ top: 35%;	right: 10%; }
+.graphic_014{ top: 50%;	left: 10%; }
+.graphic_015{ top: 57%;	left: 5%; }
+.graphic_016{ top: 71%;	right: 10%; }
+.graphic_017{ top: 70%;	right: 5%; }
+.graphic_018{ top: 84%;	left: 5%; }
+.graphic_019{ top: 90%;	left: 20%; }
+.graphic_020{ top: 0%;	right: 20%; }
+.graphic_021{ top: 30%;	left: 10%; }
+.graphic_022{ top: 35%;	left: 10%; }
+.graphic_023{ top: 87%;	right: 15%; }
+.graphic_024{ top: 70%;	right: 10%; }

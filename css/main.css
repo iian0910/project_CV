@@ -23,6 +23,7 @@
 -----------------------------------*/
 * {
   position: relative;
+  font-family: 'Microsoft JhengHei', 'Raleway', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 .bg {
@@ -134,7 +135,6 @@
           box-sizing: border-box;
   font-size: 14px;
   font-weight: 400;
-  font-family: 'Raleway', 'roboto', arial, sans-serif;
   letter-spacing: 0;
   color: #484848;
 }
@@ -204,7 +204,6 @@
 .subTitle {
   font-size: 48px;
   font-weight: 900;
-  font-family: 'Raleway', 'roboto', arial, sans-serif;
   margin-top: 24px;
   margin-bottom: 24px;
   text-align: center;
@@ -326,7 +325,6 @@
 .header .navbar .popup-menu_item {
   display: block;
   text-align: center;
-  font-family: 'Raleway', 'Helvetica', 'roboto', arial, sans-serif;
   font-size: 40px;
   font-weight: 600;
   color: #484848;
@@ -627,7 +625,6 @@
 
 .skill_card_inner_title {
   color: #373F51;
-  font-family: 'Raleway', 'roboto', arial, sans-serif;
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -777,8 +774,26 @@
   }
 }
 
+.experience .timeline-group .timeline_card_title {
+  font-size: 22px;
+  margin-bottom: 1.5;
+  font-weight: bold;
+  color: #373F51;
+}
+
+.experience .timeline-group .timeline_card_title span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
 .experience .timeline-group .timeline_card_text {
   margin: 0;
+  margin-bottom: 10px;
+}
+
+.experience .timeline-group .timeline_card_position {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .experience .timeline-group .timeline_card:before {
@@ -863,7 +878,6 @@
 
 .work_item_text_title {
   font-size: 40px;
-  font-family: 'Raleway', 'roboto', arial, sans-serif;
   font-weight: bold;
   color: #484848;
 }
@@ -940,7 +954,8 @@
   display: inline-block;
   background-color: transparent;
   border: 1px solid white;
-  color: white;
+  color: #373F51;
+  font-weight: bold;
   vertical-align: middle;
   width: 100%;
 }
@@ -952,7 +967,7 @@
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #373F51;
+  border: 3px solid #373F51;
 }
 
 .contact .form textarea {

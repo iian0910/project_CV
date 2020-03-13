@@ -555,6 +555,8 @@
   line-height: 40px;
   color: #484848;
   margin-bottom: 24px;
+  text-align: left;
+  letter-spacing: 1px;
 }
 
 .quote_name {

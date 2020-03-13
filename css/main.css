@@ -45,7 +45,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(60deg, #4e4f95, #c87db4);
+  background: linear-gradient(60deg, #a1c4fd, #c2e9fb);
   opacity: 0.6;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .text-btn_primary {
-  color: #e881a7;
+  color: #373F51;
 }
 
 .text-btn_lg {
@@ -151,13 +151,13 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #e881a7;
+  background-color: #373F51;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
 .text-btn:hover {
-  color: #e05689;
+  color: #222733;
   text-decoration: none;
 }
 
@@ -166,9 +166,9 @@
 }
 
 .work_btn {
-  border: 1px solid #e881a7;
+  border: 1px solid #373F51;
   background-color: transparent;
-  color: #e881a7;
+  color: #373F51;
   padding: 5px 80px;
   border-radius: 36px;
   font-size: 18px;
@@ -177,12 +177,12 @@
 }
 
 .work_btn:hover {
-  background-color: #e881a7;
+  background-color: #373F51;
   color: white;
 }
 
 .form-btn {
-  background-color: #e881a7;
+  background-color: #373F51;
   color: white;
   padding: 5px 80px;
   border-radius: 36px;
@@ -191,7 +191,7 @@
 }
 
 .form-btn:hover {
-  background-color: #e05689;
+  background-color: #222733;
   color: white;
 }
 
@@ -337,7 +337,7 @@
 }
 
 .header .navbar .popup-menu_item:hover {
-  color: #e881a7;
+  color: #373F51;
   text-decoration: none;
 }
 
@@ -368,7 +368,7 @@
 .header .navbar .popup-menu_close span {
   width: 32px;
   height: 5px;
-  background-color: #e881a7;
+  background-color: #373F51;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -402,11 +402,11 @@
 }
 
 .headerColorChange .menu-toggle span {
-  background-color: #e881a7 !important;
+  background-color: #373F51 !important;
 }
 
 .headerColorChange .icon-btn .icon {
-  color: #e881a7;
+  color: #373F51;
 }
 
 /*---------------------------------*/
@@ -437,7 +437,7 @@
 }
 
 .hero_btn {
-  background-color: #e881a7;
+  background-color: #373F51;
   border: none;
   font-size: 20px;
   line-height: 56px;
@@ -470,7 +470,7 @@
 }
 
 .hero_btn:active, .hero_btn:hover, .hero_btn:focus {
-  background-color: #e05689 !important;
+  background-color: #222733 !important;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -530,7 +530,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #e881a7;
+  background-color: #373F51;
   text-align: center;
   line-height: 60px;
   font-size: 32px;
@@ -551,7 +551,7 @@
 }
 
 .quote_name span {
-  color: #e881a7;
+  color: #373F51;
 }
 
 /*---------------------------------*/
@@ -613,7 +613,7 @@
 }
 
 .skill_card_inner_title {
-  color: #e881a7;
+  color: #373F51;
   font-family: 'Raleway', 'roboto', arial, sans-serif;
   margin-top: 0;
   margin-bottom: 8px;
@@ -685,7 +685,7 @@
 .experience .timeline-group .timeline {
   width: 4px;
   height: 100%;
-  background-color: #e881a7;
+  background-color: #373F51;
   position: absolute;
   top: 0;
   left: 50%;
@@ -773,7 +773,7 @@
   right: -24px;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  background-color: #e881a7;
+  background-color: #373F51;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
@@ -927,7 +927,7 @@
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #e881a7;
+  border: 1px solid #373F51;
 }
 
 .contact .form textarea {
@@ -956,7 +956,7 @@
 
 .contact .info_email a,
 .contact .info_social-bar .icon-btn {
-  color: #e881a7;
+  color: #373F51;
   font-size: 18px;
   font-weight: 400;
 }

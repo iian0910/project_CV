@@ -79,8 +79,11 @@ $CVblack: #484848;
 	bottom: 0;
 	transform: skewY(-5deg) translateY(50%);
 	@media screen and (max-width: 768px){
+    height: 180px;
+		transform: skewY(-5deg) translateY(80%);
+	}
+	@media screen and (max-width: 576px){
     height: 80px;
-    transform: skewY(-5deg) translateY(80%);
 	}
 }
 .lean-bg--bottom{
@@ -148,7 +151,7 @@ $CVblack: #484848;
 	border-radius: 36px;
 	font-size: 18px;
 	line-height: 36px;
-	z-index: 10;
+	z-index: 1;
 	&:hover{
 		background-color: $CVthird;
 		color: white;
@@ -396,12 +399,14 @@ $CVblack: #484848;
 		transform: translateX(-50%);
 		max-width: 1140px;
 		z-index: -1;
-		@media screen and (max-width:760px){
-			background-size: 320px;
+		@media screen and (max-width:768px){
+			top: 100px;
+			// background-size: 320px;
 		}
 		@media screen and (max-width:576px){
-			background-size: 200px;
+			background-size: 150px;
 			top: 40px;
+			left: 46%;
 		}
 	}
 }
@@ -415,6 +420,9 @@ $CVblack: #484848;
 	@media screen and (max-width:760px) {
 		padding-top: 40px;
 		padding-bottom: 40px;
+	}
+	@media screen and (max-width:560px) {
+		padding-top: 74px;
 	}
 	&_content{
 		text-align: center;
@@ -455,7 +463,7 @@ $CVblack: #484848;
 	background-color: white;
 	@media screen and (max-width:768px){
 		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-bottom: 80px;
 	}
 	&_group{
 		padding: 80px 0;
@@ -527,8 +535,11 @@ $CVblack: #484848;
 	padding-top: 80px;
 	padding-bottom: 80px;
 	@media screen and (max-width: 768px){
-		padding-top: 40px;
+		padding-top: 120px;
 		padding-bottom: 40px;
+	}
+	@media screen and (max-width: 576px){
+		padding-top: 40px;
 	}
 	.subTitle{
 		color: white;
@@ -682,8 +693,11 @@ $CVblack: #484848;
 	padding-top: 80px;
 	padding-bottom: 80px;
 	@media screen and (max-width: 768px){
-		padding-top: 40px;
+		padding-top: 120px;
 		padding-bottom: 40px;
+	}
+	@media screen and (max-width: 576px){
+		padding-top: 40px;
 	}
 	.subTitle{
 		color: white;

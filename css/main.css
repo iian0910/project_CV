@@ -88,9 +88,15 @@
 
 @media screen and (max-width: 768px) {
   .lean-bg--bottom::after {
-    height: 80px;
+    height: 180px;
     -webkit-transform: skewY(-5deg) translateY(80%);
             transform: skewY(-5deg) translateY(80%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .lean-bg--bottom::after {
+    height: 80px;
   }
 }
 
@@ -173,7 +179,7 @@
   border-radius: 36px;
   font-size: 18px;
   line-height: 36px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .work_btn:hover {
@@ -491,16 +497,17 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .hero_bg {
-    background-size: 320px;
+    top: 100px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .hero_bg {
-    background-size: 200px;
+    background-size: 150px;
     top: 40px;
+    left: 46%;
   }
 }
 
@@ -517,6 +524,12 @@
   .quote {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .quote {
+    padding-top: 74px;
   }
 }
 
@@ -566,7 +579,7 @@
 @media screen and (max-width: 768px) {
   .skill {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 }
 
@@ -666,8 +679,14 @@
 
 @media screen and (max-width: 768px) {
   .experience {
-    padding-top: 40px;
+    padding-top: 120px;
     padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .experience {
+    padding-top: 40px;
   }
 }
 
@@ -893,8 +912,14 @@
 
 @media screen and (max-width: 768px) {
   .contact {
-    padding-top: 40px;
+    padding-top: 120px;
     padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact {
+    padding-top: 40px;
   }
 }
 

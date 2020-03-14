@@ -673,11 +673,13 @@ $CVblack: #484848;
 				font-size: 40px;
 				font-weight: bold;
 				color: $CVblack;
+				background-color: rgba(255,255,255,0.5);
 				@media screen and (max-width: 768px) {
 					font-size: 24px;
 					line-height: 32px;
 					margin-top: 0;
 					margin-bottom: 8px;
+					background-color: inherit
 				}
 				&--right{
 					margin-right: -80px;

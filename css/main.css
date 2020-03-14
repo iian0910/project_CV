@@ -616,6 +616,8 @@
   border-radius: 4px;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 @media screen and (max-width: 768px) {
@@ -633,6 +635,11 @@
 
 .skill_card_inner_text {
   margin: 0;
+}
+
+.skill_card_inner:hover {
+  -webkit-box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.1);
 }
 
 .skill_card_icon {

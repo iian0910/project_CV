@@ -488,6 +488,7 @@ $CVblack: #484848;
 			background-color: white;
 			border-radius: 4px;
 			box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+			transition: all .3s;
 			@media screen and (max-width:768px) {
 				padding: 24px;
 				padding-top: 48px;
@@ -499,6 +500,9 @@ $CVblack: #484848;
 			}
 			&_text{
 				margin: 0;
+			}
+			&:hover{
+				box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.1);
 			}
 		}
 		&_icon{

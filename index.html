@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>個人簡歷-網頁版</title>
+	<title>個人求職簡歷│范宗勝</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 	<link rel="stylesheet" href="./css/main.css">
@@ -73,16 +73,19 @@
 					class="graphic_003" alt="">
 				<img src="./images/parallax_graphic/dot-blue.svg" data-stellar-ratio="1.5" class="graphic_004 d-none d-md-block" alt="">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-6 offset-md-3">
+					<div class="row align-items-center">
+						<div class="col-md-6">
+							<img class="img img-fluid" src="https://fakeimg.pl/600x400/">
+						</div>
+						<div class="col-md-6">
 							<div class="quote_content">
-								<div class="quote_icon">
+								<!-- <div class="quote_icon">
 									<i class="fas fa-quote-right"></i>
-								</div>
-								<p class="quote_text">畢業於資訊管理系，因為在高職求學期間接觸了網頁設計，開啟了我對網頁設計領域感興趣的開關。大學畢業後找了網頁設計的相關職務，由於初入職場所以由助理開始做起，助理做了兩年後我換到新的公司開始擔任網頁設計師。邊做邊學，一步步把自己的技能建立的比較完整，在這過程中也額外花了時間學習一些新的網頁技能(Vue.js / Git / Gulp等等)。邊做邊學，學以致用，這是我最想達到的最大目標。而最希望的就是能從網頁設計師透過學習能夠讓實力越來越堅強，成為一位優秀的前端工程師。</p>
-								<!-- <div class="quote_name">
-									<span>求職者-</span>范宗勝
 								</div> -->
+								<p class="quote_text">畢業於資訊管理系，因為在高職求學期間接觸了網頁設計，開啟了我對網頁設計領域感興趣的開關。大學畢業後找了網頁設計的相關職務，由於初入職場所以由助理開始做起，助理做了兩年後我換到新的公司開始擔任網頁設計師。邊做邊學，一步步把自己的技能建立的比較完整，在這過程中也額外花了時間學習一些新的網頁技能(Vue.js / Git / Gulp等等)。邊做邊學，學以致用，這是我最想達到的最大目標。而最希望的就是能從網頁設計師透過學習能夠讓實力越來越堅強，成為一位優秀的前端工程師。</p>
+								<div class="quote_name text-right">
+									<span>求職者-</span>范宗勝
+								</div>
 							</div>
 						</div>
 					</div>
@@ -154,7 +157,6 @@
 
 			<!-- START EXPERIENCE -->
 			<div class="experience" id="experience">
-				<!-- <img src="./images/parallax_graphic/cir-purple-lg.svg" data-stellar-ratio="1.5" class="graphic_007 d-none d-md-block" alt=""> -->
 				<img src="./images/parallax_graphic/dot-grey.svg" data-stellar-ratio="1.5" class="graphic_008" alt="">
 				<img src="./images/parallax_graphic/cir-pink-sm.svg" data-stellar-ratio="1.5" class="graphic_009" alt="">
 				<img src="./images/parallax_graphic/dot-blue.svg" data-stellar-ratio="1.5" class="graphic_010" alt="">
@@ -298,25 +300,25 @@
 				<img src="./images/parallax_graphic/cir-purple-md.svg" data-stellar-ratio="1.5" class="graphic_024" alt="">
 				<div class="container">
 					<h2 class="subTitle">CONTACT</h2>
-					<form class="form">
+					<form class="form" id="contact-form">
 						<label for="userName">Name</label>
-						<input type="text" class="form-control" id="userName">
+						<input type="text" class="form-control" id="userName" name="userName">
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="userTel">Phone</label>
-								<input type="tel" class="form-control" id="userTel">
+								<input type="tel" class="form-control" id="userTel" name="userTel">
 							</div>
 							<div class="form-group col-md-6">
 								<label for="userEmail">Email</label>
-								<input type="email" class="form-control" id="userEmail">
+								<input type="email" class="form-control" id="userEmail" name="userEmail">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="">Message</label>
-							<textarea name="" id="" cols="30" rows="10"></textarea>
+							<textarea name="userText" id="userText" cols="30" rows="10"></textarea>
 						</div>
 						<div class="bun_group text-center">
-							<input type="button" class="btn form-btn" value="Submit">
+							<input type="submit" class="btn form-btn" value="Submit" id="submit-form">
 						</div>
 					</form>
 					<div class="divide-text">or</div>
